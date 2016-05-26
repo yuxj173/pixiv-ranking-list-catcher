@@ -342,7 +342,7 @@ class pixiv_daily_manager:
 catcher = pixiv_daily_manager()
 
 try:
-    old_mode = sys.argv[1]
+    _time = sys.argv[1]
     daily_num = int(sys.argv[2])
     universal_num = int(sys.argv[3])
 except: pass
@@ -378,5 +378,11 @@ elif _time.find('-') >= 0:
         catcher.daily_analysis(daily_num)
         start = start + a_day
 else:
-    catcher.init(_time, True)
+    t = re.search(re.compile('([0-9]{4})([0-1][0-9])([0-3][0-9])'), _time)
+    try:
+        y1 = t.group(1)
+        m1 = t.group(2)
+        d1 = t.group(3)
+    except: pass
+    catcher.init('%s-%s-%s'%(y1,m1,d1), True)
     catcher.daily_analysis(daily_num)
