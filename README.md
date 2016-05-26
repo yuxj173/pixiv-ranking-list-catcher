@@ -14,11 +14,11 @@ Install [python](https://www.python.org)
 
 Save `main.py` to the root of repository that you want to keep those images, and create a file named `cookie` within your cookie for pixiv. Run `main.py` it as
 
-`python main.py [time, [maximum\_daily\_num, [maximum\_universal\_num]]]`
+`python main.py [time, [maximum_daily_num, [maximum_universal_num]]]`
 
 `time` indicates a certain day (like 20150327) or a time period (20150327-20150405). If ommited, it will be `tdy`, which denotes the up-to-date ranking list. 
 
-`maximum\_daily\_num` and `maximum\_universal\_num` give the maximum number of works to be anaysed on the list. They will defaultly be set to 50.
+`maximum_daily_num` and `maximum_universal_num` give the maximum number of works to be anaysed on the list. They will defaultly be set to 50.
 
 Some extra options are placed in the head of codes.
 
